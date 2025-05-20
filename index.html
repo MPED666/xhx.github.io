@@ -1,124 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
+    <title>520 我爱你</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Mother's Day</title>
     <style>
-      body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fbe8e7;
-    color: #333;
-}
-
-header {
-    text-align: center;
-    background-color: #ffcccb;
-    padding: 20px;
-}
-
-header h1 {
-    font-size: 2.5em;
-    color: #d40000;
-}
-
-header p {
-    font-size: 1.2em;
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 30px;
-}
-
-.photo-gallery {
-    text-align: center;
-}
-
-.photo-gallery .gallery img {
-    width: 200px;
-    margin: 10px;
-    border: 2px solid #d40000;
-    border-radius: 10px;
-}
-
-textarea {
-    width: 100%;
-    height: 100px;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-button {
-    background-color: #d40000;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #a30000;
-}
-
-footer {
-    text-align: center;
-    background-color: #ffcccb;
-    padding: 10px;
-    margin-top: 20px;
-}
+        body {
+            background: linear-gradient(120deg, #ffe0e9 0%, #fff1eb 100%);
+            font-family: 'Segoe UI', '微软雅黑', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.95);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(255,0,100,0.1);
+            padding: 32px 24px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            color: #ff4b7d;
+            margin-bottom: 0.2em;
+            letter-spacing: 0.1em;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.3em;
+            color: #ff7fa1;
+            margin-bottom: 1.5em;
+        }
+        .love-quotes {
+            margin: 2em 0;
+            padding: 1em;
+            background: #fff6fa;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #ffe0e9;
+        }
+        .love-quotes p {
+            font-size: 1.1em;
+            color: #d72660;
+            margin: 0.5em 0;
+            text-align: center;
+        }
+        .heart {
+            width: 100px;
+            height: 90px;
+            position: relative;
+            margin: 0 auto 2em auto;
+            animation: heartbeat 1.2s infinite;
+        }
+        .heart:before,
+        .heart:after {
+            content: "";
+            position: absolute;
+            left: 50px;
+            top: 0;
+            width: 50px;
+            height: 80px;
+            background: #ff4b7d;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        .heart:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1);}
+            20% { transform: scale(1.1);}
+            40% { transform: scale(0.95);}
+            60% { transform: scale(1.05);}
+            80% { transform: scale(0.97);}
+        }
+        .img-section {
+            text-align: center;
+            margin: 2em 0;
+        }
+        .img-section img {
+            max-width: 80%;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px #ffd6e0;
+        }
+        .countdown {
+            text-align: center;
+            margin: 2em 0;
+            font-size: 1.2em;
+            color: #ff4b7d;
+        }
+        .message-board {
+            margin: 2em 0;
+            padding: 1em;
+            background: #fff6fa;
+            border-radius: 12px;
+        }
+        .message-board h2 {
+            color: #d72660;
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+        }
+        .message-board textarea {
+            width: 100%;
+            height: 60px;
+            border-radius: 8px;
+            border: 1px solid #ffd6e0;
+            padding: 8px;
+            resize: none;
+            font-size: 1em;
+        }
+        .message-board button {
+            margin-top: 8px;
+            background: #ff4b7d;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 18px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .messages {
+            margin-top: 1em;
+            max-height: 120px;
+            overflow-y: auto;
+        }
+        .messages p {
+            background: #ffe0e9;
+            border-radius: 8px;
+            padding: 6px 10px;
+            margin: 6px 0;
+            color: #d72660;
+            font-size: 0.98em;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 12px 4px; }
+            h1 { font-size: 2em; }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>母亲节快乐!</h1>
-        <p>今天是一个特别的日子，让我们一起庆祝妈妈的伟大与爱！</p>
-    </header>
-    <main>
-        <section class="personal-message">
-            <h2>亲爱的劳诗慧妈妈：</h2>
-            <p>谢谢您一直以来的关爱与支持。您的微笑是我前进的动力，您的拥抱是我最温暖的港湾。</p>
-        </section>
-        <section class="photo-gallery">
-            <h2>美丽的妈妈</h2>
-            <div class="gallery">
-                <img src="./111.jpg" alt="Memory 1">
-            </div>
-        </section>
-        <section class="interactive-message">
-            <h2>给妈妈写一段话</h2>
-            <textarea id="messageBox" placeholder="写点什么吧..."></textarea>
-            <button onclick="submitMessage()">提交祝福</button>
-            <div id="displayMessage"></div>
-        </section>
-    </main>
-    <footer>
-        <p>献给全天下最好的妈妈，祝您母亲节快乐！</p>
-    </footer>
+    <div class="container">
+        <h1>润润 520快乐</h1>
+        <div class="subtitle">今天，是属于爱与浪漫的日子</div>
+        <div class="heart"></div>
+        <div class="love-quotes">
+            <p>“遇见你，是我最美丽的意外。”</p>
+            <p>“我喜欢你，像春去秋来，海棠花开。”</p>
+            <p>“全世界都可以是你的，但你只能是我的。”</p>
+            <p>“你是我藏在心底的温柔，也是我不敢说的喜欢。”</p>
+        </div>
+        <div class="img-section">
+            <img src="./rr.jpg" alt="浪漫图片">
+        </div>
+        <div class="countdown">
+            距离下一个520还有 <span id="countdown"></span>
+        </div>
+       
+    </div>
     <script>
-      function submitMessage() {
-    const messageBox = document.getElementById('messageBox');
-    const displayMessage = document.getElementById('displayMessage');
-    
-    const message = messageBox.value;
-    if (message.trim() !== '') {
-        displayMessage.innerHTML = `
-            <h3>感谢您的祝福：</h3>
-            <p>${message}</p>
-        `;
-        messageBox.value = '';
-    } else {
-        alert('请输入一段话！');
-    }
-}
+        // 520倒计时
+        function getNext520() {
+            const now = new Date();
+            let year = now.getFullYear();
+            let next520 = new Date(year, 4, 20); // 月份从0开始
+            if (now > next520) {
+                next520 = new Date(year + 1, 4, 20);
+            }
+            return next520;
+        }
+        function updateCountdown() {
+            const now = new Date();
+            const next520 = getNext520();
+            const diff = next520 - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const mins = Math.floor((diff / (1000 * 60)) % 60);
+            const secs = Math.floor((diff / 1000) % 60);
+            document.getElementById('countdown').textContent =
+                `${days}天 ${hours}小时 ${mins}分 ${secs}秒`;
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+       
     </script>
 </body>
 </html>
